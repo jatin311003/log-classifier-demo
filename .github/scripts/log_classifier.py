@@ -44,6 +44,7 @@ def classify_logs(logs):
             messages=[{"role": "user", "content": full_prompt}],
             temperature=0.2
         )
+        print("🔍 GPT RESPONSE:\n", text)
         text = response['choices'][0]['message']['content']
         not_useful = []
         for line in text.splitlines():
