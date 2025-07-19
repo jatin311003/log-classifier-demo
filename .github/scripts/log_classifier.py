@@ -35,6 +35,7 @@ def classify(logs):
         temperature=0
     )
     try:
+        print("🔍 GPT Response:", response['choices'][0]['message']['content'].strip())
         return eval(resp['choices'][0]['message']['content'].strip())
     except:
         return []
